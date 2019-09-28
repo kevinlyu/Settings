@@ -30,7 +30,7 @@ Samba setting file
 ## Issues
 Windows access denied
 
-    #Open Windows cmd
+    # Open Windows cmd
     # See if there is an existing connection
     net use
 
