@@ -140,7 +140,20 @@ Add path of ycm_extra_conf.py and YCM configure in vimrc
               \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
               \ 'cs,lua,javascript': ['re!\w{2}'],
               \ }
-    
+    let g:ycm_filetype_whitelist = { 
+			\ "c":1,
+			\ "cpp":1, 
+			\ "objc":1,
+                        。。。。
+			\ "sh":1,
+			\ "zsh":1,
+			\ "zimbu":1,
+			\ }
+
+    highlight PMenu ctermfg=0 ctermbg=242 guifg=black guibg=darkgrey
+highlight PMenuSel ctermfg=242 ctermbg=8 guifg=darkgrey guibg=black
 
 ## Reference
+- [https://github.com/ycm-core/YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
 - [https://vimjc.com/install-vim-and-vimcdoc.html](https://vimjc.com/install-vim-and-vimcdoc.html)
+- [https://vimjc.com/vim-plugin-manager.html](https://vimjc.com/vim-plugin-manager.html)
