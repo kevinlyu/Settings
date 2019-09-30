@@ -74,6 +74,7 @@ In vim, enter command :PluginInstall
 ![vundle_command](./img/vundle_command.png)
 
 Vundle would install plugins according to your vimrc config
+
 ![vundle_process](./img/vundle_process.png)
 
 Required library
@@ -150,9 +151,23 @@ Add path of ycm_extra_conf.py and YCM configure in vimrc
 			\ "zimbu":1,
 			\ }
 
-    highlight PMenu ctermfg=0 ctermbg=242 guifg=black guibg=darkgrey
-highlight PMenuSel ctermfg=242 ctermbg=8 guifg=darkgrey guibg=black
 
+Use monokai theme
+    
+    cd ~/.vim/
+    git clone https://github.com/sickill/vim-monokai.git
+
+    cp -r vim-monokai/colors/ .
+
+    # Add content below to vimrc
+    syntax enable
+    colorscheme monokai
+
+Use grey style menu 
+
+    # Add content below to vimrc
+    highlight PMenu ctermfg=0 ctermbg=242 guifg=black guibg=darkgrey
+    highlight PMenuSel ctermfg=242 ctermbg=8 guifg=darkgrey guibg=black
 ## Reference
 - [https://github.com/ycm-core/YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
 - [https://vimjc.com/install-vim-and-vimcdoc.html](https://vimjc.com/install-vim-and-vimcdoc.html)

@@ -1,0 +1,146 @@
+syntax on
+
+set nocompatible
+set smartindent
+set shiftwidth=4
+set backspace=indent,eol,start
+set ruler
+set number
+set showcmd
+set incsearch
+set hlsearch
+set hls
+set ic
+set pastetoggle=<F12>
+set enc=utf8
+
+set mouse=a
+
+set nocompatible               
+filetype off                   
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+" The following are examples of different formats supported.
+" " Keep Plugin commands between vundle#begin/end.
+" " plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" " plugin from http://vim-scripts.org/vim/scripts.html
+" " Plugin 'L9'
+" " Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" " git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" " The sparkup vim script is in a subdirectory of this repo called vim.
+" " Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" " Install L9 and avoid a Naming conflict if you've already installed a
+" " different version somewhere else.
+Plugin 'ascenator/L9', {'name': 'newL9'}
+
+
+""" Plugins
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/syntastic'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+Plugin 'majutsushi/tagbar'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-scripts/a.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'Raimondi/delimitMate'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'jez/vim-c0'
+Plugin 'jez/vim-ispc'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'flazz/vim-colorschemes'
+"Plugin 'vim-scripts/taglist.vim'
+Plugin 'kien/rainbow_parentheses.vim'
+
+call vundle#end()
+
+filetype plugin indent on
+
+
+
+""" YCM Setting
+let g:ycm_semantic_triggers =  {
+			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
+			\ 'cs,lua,javascript': ['re!\w{2}'],
+			\ }
+
+let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+
+""" Color Scheme
+syntax enable
+colorscheme monokai
+
+""" Tagbar Setting
+map <F12> :TagbarToggle<CR>
+
+""" NerdTree Setting
+nnoremap <silent> <F5> :NERDTree<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+
+"""Rainbow Parentheses Setting
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle"
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+""" delimitMate Setting
+let delimitMate_expand_cr = 1
+
+
+"""cscope Setting
+set cscopetag
+set csto=0
+
+if filereadable("cscope.out")
+    cs add cscope.out   
+elseif $CSCOPE_DB != ""
+    cs add $CSCOPE_DB
+endif
+
+set cscopeverbose
+
+nmap zs :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap zg :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap zc :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap zt :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap ze :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap zf :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap zi :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap zd :cs find d <C-R>=expand("<cword>")<CR><CR>
