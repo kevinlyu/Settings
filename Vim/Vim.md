@@ -71,11 +71,11 @@ Add script below to vimrc
 
 In vim, enter command :PluginInstall
 
-![vundle_command](img/vundle_command.png)
+![vundle_command](img/vundle_command.PNG)
 
 Vundle would install plugins according to your vimrc config
 
-![vundle_process](img/vundle_process.png)
+![vundle_process](img/vundle_process.PNG)
 
 Required library
 
