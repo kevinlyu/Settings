@@ -71,12 +71,11 @@ Add script below to vimrc
 
 In vim, enter command :PluginInstall
 
-![vundle_command](img/vundle_command.PNG){:height="480px" width="300px"}
+![vundle_command](img/vundle_command.PNG =480x300)
 
 Vundle would install plugins according to your vimrc config
 
-![vundle_process](img/vundle_process.PNG){:height="480px" width="300px"}
-
+![vundle_process](img/vundle_process.PNG)
 Required library
 
     sudo apt-get install build-essential cmake python-dev  python3-dev clang
