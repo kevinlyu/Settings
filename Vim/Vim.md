@@ -71,7 +71,7 @@ Add script below to vimrc
 
 In vim, enter command :PluginInstall
 
-![vundle_command](img/vundle_command.PNG =480x300)
+![vundle_command](img/vundle_command.PNG)
 
 Vundle would install plugins according to your vimrc config
 
