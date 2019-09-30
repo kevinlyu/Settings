@@ -168,7 +168,49 @@ Use grey style menu
     highlight PMenu ctermfg=0 ctermbg=242 guifg=black guibg=darkgrey
     highlight PMenuSel ctermfg=242 ctermbg=8 guifg=darkgrey guibg=black
 
+## C/C++ Related Tools
+
+ctags & cscope
+
+
+    sudo apt-get install exuberant-ctags cscope
+
+In your project folder, generate tag file in all directory recursively
+
+    ctags -R
+
+In your project folder, generate index file in all directory recursively
+    
+    cscope -Rbqk
+
+Add content below to vimrc
+
+    """cscope Setting
+    set cscopetag
+    set csto=0
+
+    if filereadable("cscope.out")
+        cs add cscope.out   
+    elseif $CSCOPE_DB != ""
+        cs add $CSCOPE_DB
+    endif
+
+    set cscopeverbose
+
+    nmap zs :cs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap zg :cs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap zc :cs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap zt :cs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap ze :cs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap zf :cs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap zi :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap zd :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+
+
 ## Reference
 - [https://github.com/ycm-core/YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
 - [https://vimjc.com/install-vim-and-vimcdoc.html](https://vimjc.com/install-vim-and-vimcdoc.html)
 - [https://vimjc.com/vim-plugin-manager.html](https://vimjc.com/vim-plugin-manager.html)
+
+- [https://ivan7645.github.io/2016/07/12/vim_to_si/](https://ivan7645.github.io/2016/07/12/vim_to_si/)
