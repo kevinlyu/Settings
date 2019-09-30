@@ -71,11 +71,11 @@ Add script below to vimrc
 
 In vim, enter command :PluginInstall
 
-![vundle_command](./img/vundle_command.png)
+![vundle_command](/Vim/img/vundle_command.png)
 
 Vundle would install plugins according to your vimrc config
 
-![vundle_process](./img/vundle_process.png)
+![vundle_process](/Vim/img/vundle_process.png)
 
 Required library
 
@@ -168,6 +168,7 @@ Use grey style menu
     # Add content below to vimrc
     highlight PMenu ctermfg=0 ctermbg=242 guifg=black guibg=darkgrey
     highlight PMenuSel ctermfg=242 ctermbg=8 guifg=darkgrey guibg=black
+
 ## Reference
 - [https://github.com/ycm-core/YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
 - [https://vimjc.com/install-vim-and-vimcdoc.html](https://vimjc.com/install-vim-and-vimcdoc.html)
