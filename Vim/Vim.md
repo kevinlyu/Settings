@@ -28,7 +28,7 @@ Clone from Github and build
 
     # Configure according to your requirment
     # Setting below successed in Ubuntu 14.04
-    
+
     ./configure --enable-multibyte
      --enable-pythoninterp=dynamic 
      --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu 
@@ -253,3 +253,6 @@ Add content below to vimrc
 - [https://vimjc.com/vim-plugin-manager.html](https://vimjc.com/vim-plugin-manager.html)
 
 - [https://ivan7645.github.io/2016/07/12/vim_to_si/](https://ivan7645.github.io/2016/07/12/vim_to_si/)
+
+## For Python Developer
+- [https://github.com/fisadev/fisa-vim-config](https://github.com/fisadev/fisa-vim-config)
