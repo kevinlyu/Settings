@@ -1,7 +1,20 @@
 # Vim Setting
 
 ## Vim 8
-### Build from source
+
+### Method 1 - Install via PPA 
+    sudo add-apt-repository ppa:pkg-vim/vim-daily
+    sudo apt-get update
+    sudo apt-get upgrade
+
+    # Display vim information
+    vim --version
+
+### Method 2 - Build from source
+
+Remove old version of Vim
+
+    sudo apt-get remove vim vim-runtime gvim
 
 Required library
 
@@ -11,14 +24,40 @@ Required library
 Clone from Github and build
 
     git clone https://github.com/vim/vim.git
-    cd vim
-    ./configure  --enable-pythoninterp=yes --with-python-config-dir=/usr/lib/python2.7/config
-    make && make install
+    cd vim/
+
+    # Configure according to your requirment
+    # Setting below successed in Ubuntu 14.04
+    
+    ./configure --enable-multibyte
+     --enable-pythoninterp=dynamic 
+     --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu 
+     --enable-python3interp 
+     --with-python3-config-dir=/usr/lib/python3.4/config-3.4m-x86_64-linux-gnu 
+     --enable-cscope 
+     --enable-gui=auto 
+     --with-features=huge 
+     --with-x 
+     --enable-fontset 
+     --enable-largefile 
+     --disable-netbeans 
+     --with-compiledby=sh1r0 
+     --enable-fail-if-missing
+     --enable-perlinterp=dynamic 
+     --enable-rubyinterp=dynamic 
+     --with-ruby-command=/usr/bin/ruby 
+
+    make 
+    sudo make install
 ## Youcompleteme
 
 ### Installation
 Vundle (pluging manager)
- 
+    
+    # Vundle relies on git & curl
+    sudo apt-get install git curl
+
+    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle
 
     vim ~/.vimrc
 

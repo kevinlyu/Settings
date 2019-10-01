@@ -45,6 +45,7 @@ Plugin 'ascenator/L9', {'name': 'newL9'}
 """ Plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
@@ -65,11 +66,10 @@ Plugin 'flazz/vim-colorschemes'
 "Plugin 'vim-scripts/taglist.vim'
 Plugin 'kien/rainbow_parentheses.vim'
 
+
 call vundle#end()
 
 filetype plugin indent on
-
-
 
 """ YCM Setting
 let g:ycm_semantic_triggers =  {
@@ -91,6 +91,10 @@ map <F12> :TagbarToggle<CR>
 nnoremap <silent> <F5> :NERDTree<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+
+""" NerdCommenter Setting
+let g:NERDSpaceDelims=1
 
 
 """Rainbow Parentheses Setting
