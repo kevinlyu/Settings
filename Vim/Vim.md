@@ -57,7 +57,7 @@ Vundle (pluging manager)
     # Vundle relies on git & curl
     sudo apt-get install git curl
 
-    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
     vim ~/.vimrc
 
