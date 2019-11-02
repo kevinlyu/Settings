@@ -5,7 +5,7 @@ Install ZSH
     sudo apt-get install zsh
     sudo apt-get install powerline fonts-powerline
 
-Ubuntu 18.04.3 apt install 
+Lubuntu 18.04.3 apt install 
 fonts-powerline failed, git clone and install manually
 
     # clone
@@ -21,27 +21,23 @@ fonts-powerline failed, git clone and install manually
     
     sudo fc-cache -f -v
 
+Change default shell to zsh
+
+    chsh -s /bin/zsh
 
 Install oh-my-zsh
 
     git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
-Change default shell to zsh
-
-    chsh -s /bin/zsh
-
 Enable encoding support of Chinese character
 
-    # Modify zsh.rc
+
     vim ~/.zshrc
 
-    # Add in the buttom
-    export LC_ALL=en_US.UTF-8  
+    export LC_ALL=en_US.UTF-8
     export LANG=en_US.UTF-8
 
-    # Reload .zshrc
     source ~/.zshrc
-
 ## ZSH Themes
 
 Go to [https://github.com/robbyrussell/oh-my-zsh/wiki/Themes](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes)
@@ -56,24 +52,36 @@ Then modify .zshrc configuration
 Powerlevel9k ZSH Theme
 
     sudo apt-get install zsh-theme-powerlevel9k
+
     echo "source /usr/share/powerlevel9k/powerlevel9k.zsh-theme" >> ~/.zshrc
 
 Highlighting support
 
     sudo apt-get install zsh-syntax-highlighting
+
     echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 ---
 ## Font
 
-[https://github.com/powerline/fonts](https://github.com/powerline/fonts)
+- [https://github.com/powerline/fonts](https://github.com/powerline/fonts)
 
-[https://github.com/ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
+- [https://github.com/ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
 
 ## Terminal Color Scheme
-[https://github.com/Mayccoll/Gogh](https://github.com/Mayccoll/Gogh)
+
+lxterminal palette has built in solarized 
+
+![lxterminal_solarized](./img/lxterminal_solarized.PNG)
+
+
+For Gnome terminal
+
+- [https://github.com/Mayccoll/Gogh](https://github.com/Mayccoll/Gogh)
 
 ---
 
 ## Reference
 
-[https://linuxhint.com/install_zsh_shell_ubuntu_1804/](https://linuxhint.com/install_zsh_shell_ubuntu_1804/)
+- [https://linuxhint.com/install_zsh_shell_ubuntu_1804/](https://linuxhint.com/install_zsh_shell_ubuntu_1804/)
+
+- [https://maxim-danilov.github.io/make-linux-terminal-great-again/](https://maxim-danilov.github.io/make-linux-terminal-great-again/)
