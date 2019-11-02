@@ -5,6 +5,23 @@ Install ZSH
     sudo apt-get install zsh
     sudo apt-get install powerline fonts-powerline
 
+Ubuntu 18.04.3 apt install 
+fonts-powerline failed, git clone and install manually
+
+    # clone
+    git clone https://github.com/powerline/fonts.git --depth=1
+    
+    # install
+    cd fonts
+    ./install.sh
+
+    # clean-up a bit
+    cd ..
+    rm -rf fonts
+    
+    sudo fc-cache -f -v
+
+
 Install oh-my-zsh
 
     git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
@@ -36,7 +53,7 @@ Then modify .zshrc configuration
     ZSH_THEME="THEME_NAME"
 
 ## Related Utils
-Powerlevel9k zsh
+Powerlevel9k ZSH Theme
 
     sudo apt-get install zsh-theme-powerlevel9k
     echo "source /usr/share/powerlevel9k/powerlevel9k.zsh-theme" >> ~/.zshrc
@@ -45,3 +62,13 @@ Highlighting support
 
     sudo apt-get install zsh-syntax-highlighting
     echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
+
+## Font
+
+[https://github.com/powerline/fonts](https://github.com/powerline/fonts)
+
+[https://github.com/ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
+
+## Reference
+
+[https://linuxhint.com/install_zsh_shell_ubuntu_1804/](https://linuxhint.com/install_zsh_shell_ubuntu_1804/)
