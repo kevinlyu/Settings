@@ -51,7 +51,7 @@ Then modify .zshrc configuration
 
     vim ~/.zshrc
     ZSH_THEME="THEME_NAME"
-
+---
 ## Related Utils
 Powerlevel9k ZSH Theme
 
@@ -62,12 +62,17 @@ Highlighting support
 
     sudo apt-get install zsh-syntax-highlighting
     echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
-
+---
 ## Font
 
 [https://github.com/powerline/fonts](https://github.com/powerline/fonts)
 
 [https://github.com/ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
+
+## Terminal Color Scheme
+[https://github.com/Mayccoll/Gogh](https://github.com/Mayccoll/Gogh)
+
+---
 
 ## Reference
 
