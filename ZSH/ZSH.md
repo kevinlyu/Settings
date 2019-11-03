@@ -85,3 +85,4 @@ For Gnome terminal
 - [https://linuxhint.com/install_zsh_shell_ubuntu_1804/](https://linuxhint.com/install_zsh_shell_ubuntu_1804/)
 
 - [https://maxim-danilov.github.io/make-linux-terminal-great-again/](https://maxim-danilov.github.io/make-linux-terminal-great-again/)
+- [https://medium.com/appworks-school/%E7%BE%8E%E5%8C%96%E4%BD%A0%E7%9A%84%E7%B5%82%E7%AB%AF%E6%A9%9F-7af0dabcf368](https://medium.com/appworks-school/%E7%BE%8E%E5%8C%96%E4%BD%A0%E7%9A%84%E7%B5%82%E7%AB%AF%E6%A9%9F-7af0dabcf368)
