@@ -13,8 +13,13 @@ Reboot and enter rescue mode  in GRUB menu
     systemctl stop systemd-journald-dev-log.socket
     systemctl stop systemd-journald-audit.socket
     systemctl stop systemd-journald.service
+
+    # swap off
     sudo swapoff -a 
+
+    # remount as read-only mode 
     mount -n -o remount,ro -t ext4 /dev/sda1 / 
+
     zerofree /dev/sda1
 
 
