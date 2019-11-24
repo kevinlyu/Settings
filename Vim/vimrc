@@ -65,7 +65,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'flazz/vim-colorschemes'
 "Plugin 'vim-scripts/taglist.vim'
 Plugin 'kien/rainbow_parentheses.vim'
-
+Plugin 'Chiel92/vim-autoformat'
 
 call vundle#end()
 
@@ -79,10 +79,11 @@ let g:ycm_semantic_triggers =  {
 
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
+let g:ycm_max_diagnostics_to_display = 60
 
 """ Color Scheme
 syntax enable
-colorscheme monokai
+colorscheme molokai
 
 """ Tagbar Setting
 map <F12> :TagbarToggle<CR>
@@ -148,3 +149,6 @@ nmap ze :cs find e <C-R>=expand("<cword>")<CR><CR>
 nmap zf :cs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap zi :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap zd :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+""" vim-autoformat
+noremap <F3> :Autoformat<CR>
