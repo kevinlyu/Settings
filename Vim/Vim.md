@@ -183,7 +183,6 @@ Add path of ycm_extra_conf.py and YCM configure in vimrc
 			\ "c":1,
 			\ "cpp":1, 
 			\ "objc":1,
-                        。。。。
 			\ "sh":1,
 			\ "zsh":1,
 			\ "zimbu":1,
