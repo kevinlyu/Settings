@@ -10,6 +10,10 @@ Check if Samba works
     # port 137, 138, 139 should be listened 
     sudo netstat -tulnp | grep -e '[sn]mbd'
 
+Add Samba user
+
+    sudo smbpasswd -a kevin
+
 Samba setting file
 
     # Backup
