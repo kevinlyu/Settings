@@ -252,6 +252,7 @@ Add content below to vimrc
 - [https://vimjc.com/vim-plugin-manager.html](https://vimjc.com/vim-plugin-manager.html)
 
 - [https://ivan7645.github.io/2016/07/12/vim_to_si/](https://ivan7645.github.io/2016/07/12/vim_to_si/)
+- [https://duanmeng.github.io/2018/02/14/ycm-vim-cfg/](https://duanmeng.github.io/2018/02/14/ycm-vim-cfg/)
 
 ## For Python Developer
 - [https://github.com/fisadev/fisa-vim-config](https://github.com/fisadev/fisa-vim-config)
