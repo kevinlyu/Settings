@@ -15,13 +15,13 @@ flags = [
     '-I',
     '/usr/include',
     '-isystem',
-    '/usr/lib/gcc/x86_64-linux-gnu/5/include',
+    '/usr/lib/gcc/x86_64-linux-gnu/9/include',
     '-isystem',
     '/usr/include/x86_64-linux-gnu',
     '-isystem'
-    '/usr/include/c++/5',
+    '/usr/include/c++/9',
     '-isystem',
-    '/usr/include/c++/5/bits'
+    '/usr/include/c++/9/bits'
   ]
 
 SOURCE_EXTENSIONS = [ '.cpp', '.cxx', '.cc', '.c', ]
