@@ -1,8 +1,12 @@
 syntax on
 
 set nocompatible
+set background=dark
+set termguicolors
 set smartindent
 set shiftwidth=4
+set tabstop=4
+set expandtab
 set backspace=indent,eol,start
 set ruler
 set number
