@@ -20,14 +20,15 @@ set enc=utf8
 
 set mouse=a
 
-set nocompatible               
-filetype off                   
+set nocompatible
+filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'bronson/vim-trailing-whitespace'
 " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
@@ -53,6 +54,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'arcticicestudio/nord-vim'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic'
 Plugin 'xolox/vim-misc'
@@ -89,7 +91,7 @@ let g:ycm_autoclose_preview_window_after_insertion=1 " close preview window afte
 
 """ Color Scheme
 syntax enable
-colorscheme molokai
+colorscheme nord
 
 """ Tagbar Setting
 map <F12> :TagbarToggle<CR>
@@ -158,3 +160,4 @@ nmap zd :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 """ vim-autoformat
 noremap <F3> :Autoformat<CR>
+
