@@ -55,11 +55,12 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'arcticicestudio/nord-vim'
+Plugin 'doums/darcula'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
-Plugin 'majutsushi/tagbar'
+"Plugin 'majutsushi/tagbar'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-scripts/a.vim'
 Plugin 'airblade/vim-gitgutter'
@@ -72,6 +73,19 @@ Plugin 'flazz/vim-colorschemes'
 "Plugin 'vim-scripts/taglist.vim'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'Yggdroot/indentLine'
+
+Plugin 'mhinz/vim-startify'
+
+if has('nvim') || has('patch-8.0.902')
+  Plugin 'mhinz/vim-signify'
+else
+  Plugin 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
+
+Plugin 'bfrg/vim-cpp-modern'
+
+Plugin 'liuchengxu/vista.vim'
 
 call vundle#end()
 
@@ -91,22 +105,22 @@ let g:ycm_autoclose_preview_window_after_insertion=1 " close preview window afte
 
 """ Color Scheme
 syntax enable
-colorscheme nord
+colorscheme darcula
 
 """ Tagbar Setting
 map <F12> :TagbarToggle<CR>
 
 """ NerdTree Setting
 nnoremap <silent> <F5> :NERDTreeToggle<CR>
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 
 """ NerdCommenter Setting
 let g:NERDSpaceDelims=1
 
 
-"""Rainbow Parentheses Setting
+""" Rainbow Parentheses Setting
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle"
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
@@ -137,12 +151,12 @@ au Syntax * RainbowParenthesesLoadBraces
 let delimitMate_expand_cr = 1
 
 
-"""cscope Setting
+""" cscope Setting
 set cscopetag
 set csto=0
 
 if filereadable("cscope.out")
-    cs add cscope.out   
+    cs add cscope.out
 elseif $CSCOPE_DB != ""
     cs add $CSCOPE_DB
 endif
@@ -161,3 +175,12 @@ nmap zd :cs find d <C-R>=expand("<cword>")<CR><CR>
 """ vim-autoformat
 noremap <F3> :Autoformat<CR>
 
+""" Vista
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista_default_executive = 'ctags'
+let g:vista_fzf_preview = ['right:50%']
+let g:vista#renderer#enable_icon = 1
+let g:vista#renderer#icons = {
+\   "function": "\uf794",
+\   "variable": "\uf71b",
+\  }
